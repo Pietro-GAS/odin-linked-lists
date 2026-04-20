@@ -65,15 +65,15 @@ console.log(`new list: ${list.toString()}`);
 console.log(`size: ${list.size}\n`);
 
 list.insertAt(0, "mouse", "elephant");
-console.log(`new list: ${list.toString()}`);
+console.log(`list: ${list.toString()}`);
 console.log(`size: ${list.size}\n`);
 
 list.insertAt(2, "lion", "tiger", "parrot");
-console.log(`new list: ${list.toString()}`);
+console.log(`list: ${list.toString()}`);
 console.log(`size: ${list.size}\n`);
 
 list.insertAt(7, "whale", "dolphin");
-console.log(`new list: ${list.toString()}`);
+console.log(`list: ${list.toString()}`);
 console.log(`size: ${list.size}\n`);
 
 // RangeError: index is less than 0
@@ -85,3 +85,7 @@ console.log(`size: ${list.size}\n`);
 //list.insertAt(100, "frog");
 //console.log(`new list: ${list.toString()}`);
 //console.log(`size: ${list.size}\n`);
+
+list.removeAt(0);
+console.log(`list: ${list.toString()}`);
+console.log(`size: ${list.size}\n`);

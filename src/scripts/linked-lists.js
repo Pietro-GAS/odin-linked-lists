@@ -140,4 +140,17 @@ export class LinkedList {
             }
         }
     }
+
+    removeAt(index) {
+        // Remove the node at the given index
+        if (index < 0 || index > this.size) {
+            throw new RangeError("The index is out of bounds.");
+        } else if (index === 0) {
+            this.pop();
+        } else {
+            let node = this.at(index);
+            let before = this.at(index - 1);
+            before.next = node.next;
+        }
+    }
 }
