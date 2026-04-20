@@ -60,4 +60,21 @@ export class LinkedList {
             return oldHead
         }
     }
+
+    contains(value) {
+        //
+        if (this.head === null) {
+            return false
+        } else {
+            let node = this.head;
+            for (let i = 0; i < this.size; i++) {
+                if (node.value === value) {
+                    return true
+                } else {
+                    node = node.next;
+                }
+            }
+            return false
+        }
+    }
 }
