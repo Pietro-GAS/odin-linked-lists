@@ -8,6 +8,7 @@ let tail = list.getTail();
 //console.log(`head next: ${head.next}`);
 console.log(`contains cat? ${list.contains("cat")}`);
 console.log(`index of cat: ${list.findIndex("cat")}`);
+console.log(`list: ${list.toString()}`);
 console.log(`size: ${list.size}\n`);
 
 list.append("dog");
@@ -19,6 +20,7 @@ console.log(`tail value: ${tail.value}`);
 console.log(`tail next: ${tail.next}`);
 console.log(`contains cat? ${list.contains("cat")}`);
 console.log(`index of cat: ${list.findIndex("cat")}`);
+console.log(`list: ${list.toString()}`);
 console.log(`size: ${list.size}\n`);
 
 list.append("cat");
@@ -30,6 +32,7 @@ console.log(`tail value: ${tail.value}`);
 console.log(`tail next: ${tail.next}`);
 console.log(`contains cat? ${list.contains("cat")}`);
 console.log(`index of cat: ${list.findIndex("cat")}`);
+console.log(`list: ${list.toString()}`);
 console.log(`size: ${list.size}\n`);
 
 list.prepend("mouse");
@@ -41,6 +44,7 @@ console.log(`tail value: ${tail.value}`);
 console.log(`tail next: ${tail.next}`);
 console.log(`contains cat? ${list.contains("cat")}`);
 console.log(`index of cat: ${list.findIndex("cat")}`);
+console.log(`list: ${list.toString()}`);
 console.log(`size: ${list.size}\n`);
 
 let indexZero = list.at(0);
@@ -53,7 +57,9 @@ console.log(`index of mouse: ${list.findIndex("mouse")}`);
 console.log(`index of dog: ${list.findIndex("dog")}`);
 console.log(`index of cat: ${list.findIndex("cat")}\n`);
 
+console.log(`old list: ${list.toString()}`);
 let oldHead = list.pop();
 console.log(`old head: ${oldHead.value}`);
 console.log(`new head: ${list.getHead().value}`);
+console.log(`new list: ${list.toString()}`);
 console.log(`size: ${list.size}`)

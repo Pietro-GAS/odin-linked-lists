@@ -13,6 +13,7 @@ export class LinkedList {
     }
 
     append(value) {
+        // Add a node to the end of the list
         const node = new Node(value);
         if (this.tail === null) {
             this.head = node;
@@ -25,6 +26,7 @@ export class LinkedList {
     }
 
     prepend(value) {
+        // Add a node to the start of the list
         const node = new Node(value, this.head);
         this.head = node;
         this.size ++;
@@ -43,6 +45,7 @@ export class LinkedList {
     }
 
     at(index) {
+        // Return the value of the node at the given index
         let node = this.head;
         for (let i = 1; i <= index; i++) {
             node = node.next;
@@ -51,6 +54,7 @@ export class LinkedList {
     }
 
     pop() {
+        // Remove the head and return its value
         if (this.head === null) {
             return undefined
         } else {
@@ -62,7 +66,7 @@ export class LinkedList {
     }
 
     contains(value) {
-        //
+        // Checks whether the given value is in the list
         if (this.head === null) {
             return false
         } else {
@@ -79,6 +83,7 @@ export class LinkedList {
     }
 
     findIndex(value) {
+        // Find the (first) index of a given value
         if (!this.contains(value)) {
             return -1
         } else {
@@ -90,6 +95,27 @@ export class LinkedList {
                     node = node.next
                 }
             }
+        }
+    }
+
+    toString() {
+        // Convert the list to a string
+        let string = "";
+        if (this.head === null) {
+            return string
+        } else {
+            let node = this.head;
+            let separator = ` -> `;
+            string = `(${node.value})${separator}`
+            for (let i = 0; i < this.size; i++) {
+                if (node !== this.tail) {
+                    string += `(${node.next.value})${separator}`;
+                    node = node.next;
+                } else {
+                    string += `${node.next}`;
+                }
+            }
+            return string
         }
     }
 }
