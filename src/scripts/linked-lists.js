@@ -151,6 +151,7 @@ export class LinkedList {
             let node = this.at(index);
             let before = this.at(index - 1);
             before.next = node.next;
+            this.size --;
         }
     }
 }

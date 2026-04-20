@@ -89,3 +89,7 @@ console.log(`size: ${list.size}\n`);
 list.removeAt(0);
 console.log(`list: ${list.toString()}`);
 console.log(`size: ${list.size}\n`);
+
+list.removeAt(1);
+console.log(`list: ${list.toString()}`);
+console.log(`size: ${list.size}\n`);
