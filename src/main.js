@@ -62,4 +62,26 @@ let oldHead = list.pop();
 console.log(`old head: ${oldHead.value}`);
 console.log(`new head: ${list.getHead().value}`);
 console.log(`new list: ${list.toString()}`);
-console.log(`size: ${list.size}`)
+console.log(`size: ${list.size}\n`);
+
+list.insertAt(0, "mouse", "elephant");
+console.log(`new list: ${list.toString()}`);
+console.log(`size: ${list.size}\n`);
+
+list.insertAt(2, "lion", "tiger", "parrot");
+console.log(`new list: ${list.toString()}`);
+console.log(`size: ${list.size}\n`);
+
+list.insertAt(7, "whale", "dolphin");
+console.log(`new list: ${list.toString()}`);
+console.log(`size: ${list.size}\n`);
+
+// RangeError: index is less than 0
+//list.insertAt(-2, "butterfly");
+//console.log(`new list: ${list.toString()}`);
+//console.log(`size: ${list.size}\n`);
+
+// RangeError: index is ore than list size
+//list.insertAt(100, "frog");
+//console.log(`new list: ${list.toString()}`);
+//console.log(`size: ${list.size}\n`);

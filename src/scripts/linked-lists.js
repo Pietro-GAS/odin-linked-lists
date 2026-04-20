@@ -118,4 +118,26 @@ export class LinkedList {
             return string
         }
     }
+
+    insertAt(index, ...values) {
+        // Insert nodes with the given values at the given index
+        if (index < 0 || index > this.size) {
+            throw new RangeError("The index is out of bounds.");
+        } else if (index === 0) {
+            for (let i = values.length - 1; i >= 0; i--) {
+                this.prepend(values[i]);
+            }
+        } else if (index === this.size) {
+            for (let i = 0; i < values.length; i++) {
+                this.append(values[i]);
+            }
+        } else {
+            let before = this.at(index - 1);
+            for(let i = values.length - 1; i >= 0; i--) {
+                let node = new Node(values[i], before.next)
+                before.next = node;
+                this.size ++;
+            }
+        }
+    }
 }
